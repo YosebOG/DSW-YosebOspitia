@@ -45,10 +45,109 @@
             </ul><br>
         
         <h2>Contenido</h2>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ut est exercitationem 
-                vitae ex ad quidem, quos dolore vel minus tenetur porro similique voluptatum atque 
-                laudantium. Molestias rerum sapiente velit.</p><br>
-        
+            <h3>Estilos Internos y Externos de CSS</h3>
+            <p> Para definir el estilo de una página de un web desde un archivo externo, debe crearse un archivo de texto, conteniendo las definiciones, y guardarlo con la extensión *.css.
+                
+                Una vez creado, basta incluir un link a ese archivo .css en cada página que queramos aplicar estos estilos. De esta forma, una misma hoja de estilos puede aplicarse a cualquier número de páginas web, simplemente incluyendo en todas ellas el link correspondiente.
+                
+                Como cualquier link, la localización del archivo CSS puede ser absoluta o relativa, dependiendo de su ubicación dentro del propio sitio web, o en otra dirección.
+                
+                El link siempre debe insertarse dentro de las etiquetas HEAD del encabezamiento de la página Web:
+                
+                &lt;HEAD&gt;
+                ....
+                
+                &lt;LINK REL="STYLESHEET" HREF="estilos.css" TYPE="text/css"&gt;
+                &lt;/HEAD&gt;
+                
+                Donde estilos.css es el archivo que contiene las definiciones de estilo. En este caso se trata de un link relativo, ya que se supone que estilos.css está ubicado en el mismo sitio y directorio que las páginas a las que afecta.
+                
+                También son posibles los links absolutos
+                &lt;HEAD&gt;
+                ....
+                
+                &lt;LINK REL="STYLESHEET" HREF="http://www.usabilidad/estilos.css" TYPE="text/css"&gt;
+                &lt;/HEAD&gt;
+                
+                El atributo REL se usa para definir la relación entre el archivo enlazado y el documento HTML.
+                
+                REL="StyleSheet" especifica el estilo preferido mientras que REL="Alternate StyleSheet" define un estilo alternativo. El estilo preferido se cargará y aplicará siempre.
+                
+                Un estilo alterno se indica por REL="Alternate StyleSheet". Los navegadores actuales generalmente carecen de la capacidad de elegir estilos alternos.
+                
+                El atributo opcional TYPE se usa para especificar el tipo de archivo:
+                
+                "text/css" para una hoja de estilo en cascada normal.
+                
+                "text/javascript" si es un script, etc. Con ello permitimos a los navegadores omitir los tipos de archivo que no soportan.
+                
+                El link puede tener otro atributo opcional: MEDIA, que especifica el medio o medios al que se aplica la hoja de estilo. Los valores posibles mas importantes son "screen" (pantalla, valor por defecto), y "print", para salida a una impresora
+                
+                Dentro de nuestro archivo css NO deben incluirse las llaves de las etiquetas HTML. Los comentarios encerrados entre los caracteres /* ... */ si son admisibles.
+                </p>
+            
+            <h3>Selectores de CSS3</h3>
+            <p>elemento[atributo^="valor"], selecciona todos los elementos que disponen de ese atributo y cuyo valor comienza exactamente por la cadena de texto indicada.
+                elemento[atributo$="valor"], selecciona todos los elementos que disponen de ese atributo y cuyo valor termina exactamente por la cadena de texto indicada.
+                elemento[atributo*="valor"], selecciona todos los elementos que disponen de ese atributo y cuyo valor contiene la cadena de texto indicada.
+                
+                /* Selecciona todos los enlaces que apuntan a una dirección de correo electrónico */
+                a[href^="mailto:"] { ... }
+                
+                /* Selecciona todos los enlaces que apuntan a una página HTML */
+                a[href$=".html"] { ... }
+                
+                /* Selecciona todos los títulos h1 cuyo atributo title contenga la palabra "capítulo" */
+                h1[title*="capítulo"] { ... }
+                
+                Otro de los nuevos selectores de CSS 3 es el "selector general de elementos hermanos", que generaliza el selector adyacente de CSS 2.1. Su sintaxis es elemento1 ~ elemento2 y selecciona el elemento2 que es hermano de elemento1 y se encuentra detrás en el código HTML. En el selector adyacente la condición adicional era que los dos elementos debían estar uno detrás de otro en el código HTML, mientras que ahora la única condición es que uno esté detrás de otro.
+                
+                Si se considera el siguiente ejemplo:
+                
+                h1 + h2 { ... }  /* selector adyacente */
+                h1 ~ h2 { ... }  /* selector general de hermanos */
+                
+                El primer selector (h1 + h2) sólo selecciona el primer elemento (h2) de la página, ya que es el único que cumple que es hermano de (h1) y se encuentra justo detrás en el código HTML. Por su parte, el segundo selector (h1 ~ h2) selecciona todos los elementos (h2) de la página salvo el segundo. Aunque el segundo (h2) se encuentra detrás de (h1) en el código HTML, no son elementos hermanos porque no tienen el mismo elemento padre.
+                
+                Los pseudo-elementos de CSS 2.1 se mantienen en CSS 3, pero cambia su sintaxis y ahora se utilizan :: en vez de : delante del nombre de cada pseudo-elemento:
+                
+                ::first-line, selecciona la primera línea del texto de un elemento.
+                ::first-letter, selecciona la primera letra del texto de un elemento.
+                ::before, selecciona la parte anterior al contenido de un elemento para insertar nuevo contenido generado.
+                ::after, selecciona la parte posterior al contenido de un elemento para insertar nuevo contenido generado.
+                CSS 3 añade además un nuevo pseudo-elemento:
+                
+                ::selection, selecciona el texto que ha seleccionado un usuario con su ratón o teclado.
+                Las mayores novedades de CSS 3 se producen en las pseudo-clases, ya que se añaden 12 nuevas, entre las cuales se encuentran:
+                
+                elemento:nth-child(numero), selecciona el elemento indicado pero con la condición de que sea el hijo enésimo de su padre. Este selector es útil para seleccionar el segundo párrafo de un elemento, el quinto elemento de una lista, etc.
+                elemento:nth-last-child(numero), idéntico al anterior pero el número indicado se empieza a contar desde el último hijo.
+                elemento:empty, selecciona el elemento indicado pero con la condición de que no tenga ningún hijo. La condición implica que tampoco puede tener ningún contenido de texto.
+                elemento:first-child y elemento:last-child, seleccionan los elementos indicados pero con la condición de que sean respectivamente los primeros o últimos hijos de su elemento padre.
+                elemento:nth-of-type(numero), selecciona el elemento indicado pero con la condición de que sea el enésimo elemento hermano de ese tipo.
+                elemento:nth-last-of-type(numero), idéntico al anterior pero el número indicado se empieza a contar desde el último hijo.
+                Algunas pseudo-clases como :nth-child(numero) permiten el uso de expresiones complejas para realizar selecciones avanzadas:
+                
+                li:nth-child(2n+1) { ... }   /* selecciona todos los elementos impares de una lista */
+                li:nth-child(2n)   { ... }   /* selecciona todos los elementos pares de una lista */
+                
+                /* Las siguientes reglas alternan cuatro estilos diferentes para los párrafos */
+                p:nth-child(4n+1) { ... }
+                p:nth-child(4n+2) { ... }
+                p:nth-child(4n+3) { ... }
+                p:nth-child(4n+4) { ... }
+                
+                Empleando la pseudo-clase :nth-of-type(numero) se pueden crear reglas CSS que alternen la posición de las imágenes en función de la posición de la imagen anterior:
+                
+                img:nth-of-type(2n+1) { float: right; }
+                img:nth-of-type(2n)   { float: left;  }
+                Otro de los nuevos selectores que incluirá CSS 3 es :not(), que se puede utilizar para seleccionar todos los elementos que no cumplen con la condición de un selector:
+                
+                :not(p) { ... }  /* selecciona todos los elementos de la página que no sean párrafos */
+                :not(#especial) { ... }  /* selecciona cualquier elemento cuyo atributo id no sea "especial" */
+                </p>
+            <br>
+            
         <h2>Maquetación</h2>
             <img src="img/mockup.png" alt="Mockup" style="width:900px;">
     </section>
