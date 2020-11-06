@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.cuerpo{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    }
+
+    /* lo que quieres es View-port-height y View-port-width:
+    <div style="height: 50vh;width: 25vw"></div> */
+
+.caja{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1050px;
+    height: 570px;
+    background: darkgreen;
+    border-radius: 50px;
+}
+
+#caja_1{
+    text-align: center;
+}
