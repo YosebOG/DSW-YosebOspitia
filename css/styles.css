@@ -5,22 +5,52 @@
 
 .cuerpo{
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    /* height: 100vh; */
+    /* display: flex;
+    align-items: center; */
     }
 
     /* lo que quieres es View-port-height y View-port-width:
     <div style="height: 50vh;width: 25vw"></div> */
 
 .caja{
+    margin-top: 12px;
+    margin-bottom: 12px;
     margin-left: auto;
     margin-right: auto;
     width: 1100px;
-    height: 100vh;
+    height: 600px;
     background: darkgreen;
 }
 
 #caja_1{
     text-align: center;
+}
+
+/* Configuración de iconos SVG */
+
+.icon{
+    background: aquamarine;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    text-align: center;
+}
+
+svg {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+} 
+
+#home-icon #techo-home{
+    fill: blue;
+}
+
+#home-icon #base-home{
+    fill: blue;
+}
+
+#back-icon{
+    fill: blueviolet;
 }
