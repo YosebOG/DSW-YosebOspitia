@@ -21,6 +21,7 @@
     width: 1100px;
     height: 600px;
     background: darkgreen;
+    overflow: hidden;
 }
 
 #caja_1{
@@ -36,21 +37,69 @@
     display: flex;
     text-align: center;
 }
+/* ----------------------- */
+#home{
+    float: left;
+}
 
-svg {
+.svg-home{
     width: 70px;
     height: 70px;
     margin: auto;
 } 
 
-#home-icon #techo-home{
+.home-icon #techo-home{
     fill: blue;
 }
 
-#home-icon #base-home{
+.home-icon #base-home{
     fill: blue;
 }
+/* ----------------------- */
+#back{
+    float: left;
+    transform: translate(0px,-140px);
+    /* position: absolute;
+    bottom: 50%; */
+}
 
-#back-icon{
+.svg-back{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+
+.back-icon{
     fill: blueviolet;
+}
+
+/* Fin de Configuración de iconos Sjmk,l.VG */
+.caja-cuerpo{
+    width: 1100px;
+    height: 600px;
+}
+
+#web-design{
+    margin: 0px auto;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+#web-design img{
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.caja-footer{
+    background: chocolate;
+    height: 70px;
+    transform: translate(0px, -70px);
 }
