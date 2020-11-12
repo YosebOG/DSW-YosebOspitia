@@ -27,7 +27,7 @@
 /* Configuración de iconos SVG */
 
 .icon{
-    background: aquamarine;
+    /* background: aquamarine; */
     width: 80px;
     height: 80px;
     display: flex;
@@ -39,17 +39,20 @@
 }
 
 .svg-home{
-    width: 70px;
-    height: 70px;
-    margin: auto;
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: 11px;
 } 
 
 .home-icon #techo-home{
-    fill: blue;
+    fill: lightblue;
 }
 
 .home-icon #base-home{
-    fill: blue;
+    fill: lightblue;
 }
 /* ----------------------- */
 #back{
@@ -66,7 +69,7 @@
 }
 
 .back-icon{
-    fill: blueviolet;
+    fill: lightblue;
 }
 
 /* Fin de Configuración de iconos SVG */
