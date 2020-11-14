@@ -1,27 +1,59 @@
+@font-face{
+    font-family: 'Angsana New';
+    src: url(../font/ANGSA.ttf), url(../font/angsab.ttf);
+}
+
+@font-face{
+    font-family: 'Franklin Gothic Book';
+    src: url(../font/franklin-gothic-book.ttf), url(../font/franklin-gothic-book-italic.ttf);
+}
+
+@font-face{
+    font-family: 'Franklin Gothic Heavy';
+    src: url(../font/franklin-gothic-heavy.ttf);
+}
+
+@font-face{
+    font-family: 'Franklin Gothic';
+    src: url(../font/franklin-gothic-italic.ttf);
+}
+
 *{
     margin: 0px;
     padding: 0px;
 }
 
+*:focus{
+    outline: none;
+}
+
+body{
+    background: #e7e7e8;
+}
+
 .cuerpo{
-    width: 100vw;
-    /* height: 100vh; */
-    /* display: flex;
-    align-items: center; */
+    /* width: 100vw; */
+    height: 100vh;
+    /* padding-top: 12px;
+    padding-bottom: 12px; */
+    display: flex;
+    align-items: center;
     }
 
     /* lo que quieres es View-port-height y View-port-width:
     <div style="height: 50vh;width: 25vw"></div> */
 
 .caja{
-    margin-top: 12px;
-    margin-bottom: 12px;
+    /* margin-top: 12px;
+    margin-bottom: 12px; */
     margin-left: auto;
     margin-right: auto;
     width: 1100px;
     height: 600px;
-    background: darkgreen;
+    background: #005883;
     overflow: hidden;
+    box-shadow: #a3a3a3 0px 0px 30px 10px;
+    /* box-shadow: 'color' 'des.hor' 'des.ver' 'difuminación' 'radio' */
 }
 
 /* Configuración de iconos SVG */
@@ -48,16 +80,16 @@
 } 
 
 .home-icon #techo-home{
-    fill: lightblue;
+    fill: #e7e7e8;
 }
 
 .home-icon #base-home{
-    fill: lightblue;
+    fill: #e7e7e8;
 }
 /* ----------------------- */
 #back{
     float: left;
-    transform: translate(0px,-150px);
+    transform: translate(0px,-170px);
     /* position: absolute;
     bottom: 50%; */
 }
@@ -69,12 +101,12 @@
 }
 
 .back-icon{
-    fill: lightblue;
+    fill: #f0b429;
 }
 
 /* Fin de Configuración de iconos SVG */
 #caja_1{
-    text-align: center;
+    /* text-align: center; */
 }
 
 .caja-cuerpo{
@@ -86,29 +118,32 @@
 .caja-cuerpo header{
     margin-left: auto;
     margin-right: auto;
-    width: 45%;
+    text-align: center;
+    width: 100%;
 }
 .caja-cuerpo header h4{
-    line-height: 0.5em;
-    margin-left: 150px;
+    line-height: 0.7em;
+    margin-left: 400px;
     margin-right: auto;
-    margin-bottom: 5px;
-    width: inherit;
+    margin-bottom: 8px;
+    width: 300px;
 }
 .caja-cuerpo header h1{
-    line-height: 0.8em;
+    line-height: 0.7em;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     width: initial;
 }
 .caja-cuerpo section{
     width: 900px;
     margin: 20px auto 15px auto;
+    text-align: justify;
 }
-/* --------Tamaños de titulares H-------- */
+/* --------Tamaños de titulares H y texto p-------- */
 h1{
-    font-size: 6em;
+    font-size: 6.8em;
+    font-family: 'Franklin Gothic Heavy';
 }
 
 h2{
@@ -121,10 +156,13 @@ h3{
 
 h4{
     font-size: 3em;
+    font-family: 'Franklin Gothic Heavy';
 }
 
 p{
-    font-size: 1.52em;
+    font-size: 2em;
+    font-family: 'Angsana New'; /* Angsana New | Franklin Gothic Book */
+    line-height: 1em;
 }
 
 /* Imagen inicial Caja_1*/
@@ -139,18 +177,48 @@ p{
 }
 #web-design img{
     position: absolute;
+    -webkit-touch-callout: none;
+    user-select: none;
     left: -100%;
     right: -100%;
     top: -100%;
     bottom: -100%;
     margin: auto;
-    min-height: 100%;
     max-width: 70%;
 }
 
 /* Franja inferior Caja_1 */
 .caja-footer{
-    background: chocolate;
+    background: #e7e7e8;
     height: 70px;
-    transform: translate(0px, -70px);
+    width: 100%;
+    transform: translate(0px, -150px);
+    display: inline-block;
+    box-shadow: #f47920 0px -20px 0px;
+}
+.caja-footer #logo-unad{
+    /* background: #E7E7E8; */
+    margin-left: 25px;
+    width: 250px;
+    height: 70px;
+    position: absolute;
+}
+.caja-footer #logo-unad img{
+    -webkit-touch-callout: none;
+    user-select: none;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    height: 52px;
+}
+
+.caja-audio{
+    margin-right: 25px;
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    right: 0px;
+}
+.caja-audio audio{
+    width: 250px;
+    margin: 8px 0px;
 }
