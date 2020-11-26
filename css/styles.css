@@ -1,3 +1,4 @@
+            /* Configuración de fuentes */
 @font-face{
     font-family: 'Angsana New';
     src: url(../font/ANGSA.ttf), url(../font/angsab.ttf);
@@ -18,11 +19,57 @@
     src: url(../font/franklin-gothic-italic.ttf);
 }
 
+        /* Configuración de tranciciones */
+.ent
+{
+    -webkit-animation: 1s animEnt ease-out;
+}
+@keyframes animEnt
+{
+    0%
+    {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+    }
+    90%
+    {
+        opacity: 0.9;
+        -webkit-transform: scale(1.15);
+    }
+    100%
+    {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+}
+.sal
+{
+    -webkit-animation: 1s animSal;
+}
+@keyframes animSal
+{
+    0%
+    {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+    45%
+    {
+        opacity: 1;
+        -webkit-transform: scale(1.15);
+    }
+    100%
+    {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+    }
+}
+
+            /* Configuración General HTML */
 *{
     margin: 0px;
     padding: 0px;
 }
-
 *:focus{
     outline: none;
 }
@@ -32,20 +79,15 @@ body{
 }
 
 .cuerpo{
-    /* width: 100vw; */
     height: 100vh;
-    /* padding-top: 12px;
-    padding-bottom: 12px; */
     display: flex;
     align-items: center;
     }
+/* lo que quieres es View-port-height y View-port-width:
+<div style="height: 50vh;width: 25vw"></div> */
 
-    /* lo que quieres es View-port-height y View-port-width:
-    <div style="height: 50vh;width: 25vw"></div> */
-
+            /* Configuración de cajas e internas */
 .caja{
-    /* margin-top: 12px;
-    margin-bottom: 12px; */
     margin-left: auto;
     margin-right: auto;
     width: 1100px;
@@ -54,62 +96,6 @@ body{
     overflow: hidden;
     box-shadow: #a3a3a3 0px 0px 30px 10px;
     /* box-shadow: 'color' 'des.hor' 'des.ver' 'difuminación' 'radio' */
-}
-
-/* Configuración de iconos SVG */
-
-.icon{
-    /* background: aquamarine; */
-    width: 80px;
-    height: 80px;
-    display: flex;
-    text-align: center;
-}
-/* ----------------------- */
-#home{
-    float: left;
-    margin-top: 12px;
-    margin-left: 12px;
-}
-
-.svg-home{
-    width: 60px;
-    height: 60px;
-    margin-top: 5px;
-    margin-right: auto;
-    margin-bottom: auto;
-    margin-left: 11px;
-} 
-
-.home-icon #techo-home{
-    fill: #f3f3f3;
-}
-
-.home-icon #base-home{
-    fill: #f3f3f3;
-}
-/* ----------------------- */
-#back{
-    float: left;
-    transform: translate(0px,-180px);
-    margin-left: 12px;
-    /* position: absolute;
-    bottom: 50%; */
-}
-
-.svg-back{
-    width: 60px;
-    height: 60px;
-    margin: auto;
-}
-
-.back-icon{
-    fill: #f3f3f3;
-}
-
-/* Fin de Configuración de iconos SVG */
-#caja_1{
-    /* text-align: center; */
 }
 
 .caja-cuerpo{
@@ -146,6 +132,75 @@ body{
     color: #ffffff;
     text-shadow: 0px 0px 0.5px #000000;
 }
+            /* Configuración de iconos SVG */
+.icon{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    text-align: center;
+}
+
+#home{
+    float: left;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+#back{
+    float: left;
+    transform: translate(0px,-180px);
+    margin-left: 12px;
+    /* position: absolute;
+    bottom: 50%; */
+}
+
+.svg-home{
+    width: 60px;
+    height: 60px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    fill: #f3f3f3;
+    -webkit-transition: 0.3s ease-out;
+}
+.svg-back{
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+    margin-right: 7px;
+    fill: #f3f3f3;
+    -webkit-transition: 0.3s ease-out;
+}
+
+            /* Configuración de botones */
+button{
+    -webkit-transition: 0.3s ease-out;
+    background: none;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+button:hover{
+    /* box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.5);  */
+    /* rgba(0,0,0,0.5); #b3b3b3;*/
+    background: #e2e2e2;
+    cursor: pointer;
+}
+#btn_home:hover .svg-home{
+    fill: #f47920;
+    -webkit-transform: scale(0.9);
+}
+#btn_back:hover .svg-home{
+    fill: #f0b429;
+}
+button:active{
+    /* filter: grayscale(100%); Solo para imagenes */
+    /* opacity: 0.6; la vuelve medio trasnparente*/
+    filter: brightness(0.6); /* cambia luminosidad 0-1 */
+    -webkit-transform: scale(0.79);
+}
+
 /* --------Tamaños de titulares H y texto p-------- */
 h1{
     font-size: 6.8em;
@@ -171,15 +226,18 @@ p{
     line-height: 1em;
 }
 
-/* Imagen inicial Caja_1*/
+            /* Imagenes */
+figure{
+    overflow: hidden;
+    z-index: 2;
+}
+
 #web-design{
     background: #9CC3E2;
     margin: 0px auto;
     height: 230px;
     width: 500px;
-    overflow: hidden;
     position: relative;
-    z-index: 2;
 }
 #web-design img{
     position: absolute;
@@ -193,14 +251,13 @@ p{
     max-width: 70%;
 }
 
-/* Franja inferior Caja_1 */
+            /* Franja inferior */
 .caja-footer{
-    background: #e7e7e8;
+    background: #e1e0e0; /* #e1e0e0 #e7e7e8 */
     height: 70px;
     width: 100%;
-    transform: translate(0px, -150px);
+    transform: translate(0px, -70px);
     display: inline-block;
-    box-shadow: #f47920 0px -20px 0px;
 }
 .caja-footer #logo-unad{
     /* background: #E7E7E8; */
@@ -217,14 +274,54 @@ p{
     height: 52px;
 }
 
+#footer_c1{
+    box-shadow: #f47920 0px -20px 0px;
+}
+#footer_c2{
+    box-shadow: #f47920 0px -20px 0px;
+}
+#footer_c3{
+    box-shadow: #f47920 0px -20px 0px;
+}
+#footer_c4{
+    box-shadow: #f47920 0px -20px 0px;
+}
+#footer_c5{
+    box-shadow: #f47920 0px -20px 0px;
+}
+
+            /* Configuracion cajas de audio */
 .caja-audio{
-    margin-right: 25px;
     width: 250px;
     height: 70px;
-    position: absolute;
-    right: 0px;
 }
 .caja-audio audio{
     width: 250px;
     margin: 8px 0px;
+}
+
+#audio_c1{
+    margin-right: 25px;
+    position: absolute;
+    right: 0px;
+}
+#audio_c2{
+    margin-right: 25px;
+    position: absolute;
+    right: 0px;
+}
+#audio_c3{
+    margin-right: 25px;
+    position: absolute;
+    right: 0px;
+}
+#audio_c4{
+    margin-right: 25px;
+    position: absolute;
+    right: 0px;
+}
+#audio_c5{
+    margin-right: 25px;
+    position: absolute;
+    right: 0px;
 }
