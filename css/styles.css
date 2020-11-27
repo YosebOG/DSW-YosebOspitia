@@ -22,7 +22,7 @@
         /* Configuración de tranciciones */
 .ent
 {
-    -webkit-animation: 1s animEnt ease-out;
+    -webkit-animation: 0.5s animEnt ease-out;
 }
 @keyframes animEnt
 {
@@ -31,7 +31,7 @@
         opacity: 0;
         -webkit-transform: scale(0.1);
     }
-    90%
+    80%
     {
         opacity: 0.9;
         -webkit-transform: scale(1.15);
@@ -44,7 +44,7 @@
 }
 .sal
 {
-    -webkit-animation: 1s animSal;
+    -webkit-animation: 0.5s animSal;
 }
 @keyframes animSal
 {
@@ -53,7 +53,7 @@
         opacity: 1;
         -webkit-transform: scale(1);
     }
-    45%
+    20%
     {
         opacity: 1;
         -webkit-transform: scale(1.15);
@@ -86,7 +86,7 @@ body{
 /* lo que quieres es View-port-height y View-port-width:
 <div style="height: 50vh;width: 25vw"></div> */
 
-            /* Configuración de cajas e internas */
+            /* Configuración de cajas */
 .caja{
     margin-left: auto;
     margin-right: auto;
@@ -98,6 +98,7 @@ body{
     /* box-shadow: 'color' 'des.hor' 'des.ver' 'difuminación' 'radio' */
 }
 
+        /* Configuración de Caja_cuerpo */
 .caja-cuerpo{
     width: 1000px;
     height: 560px;
@@ -134,23 +135,32 @@ body{
 }
             /* Configuración de iconos SVG */
 .icon{
-    width: 80px;
-    height: 80px;
     display: flex;
     text-align: center;
 }
 
 #home{
+    width: 80px;
+    height: 80px;
     float: left;
     margin-top: 12px;
     margin-left: 15px;
 }
 #back{
+    width: 70px;
+    height: 70px;
     float: left;
-    transform: translate(0px,-180px);
+    transform: translate(0px,-172px);
     margin-left: 12px;
     /* position: absolute;
     bottom: 50%; */
+}
+#option{
+    width: 65px;
+    height: 65px;
+    float: right;
+    margin-top: 12px;
+    margin-right: 12px;
 }
 
 .svg-home{
@@ -164,40 +174,62 @@ body{
     -webkit-transition: 0.3s ease-out;
 }
 .svg-back{
-    width: 50px;
-    height: 50px;
-    margin-top: 3px;
+    width: 40px;
+    height: 40px;
+    /* margin-top: 3px; */
     margin-right: 7px;
+    fill: #f3f3f3;
+    -webkit-transition: 0.3s ease-out;
+}
+.svg-option{
+    width: 40px;
+    height: 40px;
     fill: #f3f3f3;
     -webkit-transition: 0.3s ease-out;
 }
 
             /* Configuración de botones */
 button{
-    -webkit-transition: 0.3s ease-out;
+    -webkit-transition: 0.05s ease-out;
     background: none;
     border-radius: 50px;
-    width: 80px;
-    height: 80px;
     border: none;
 }
+.btn_home{
+    width: 80px;
+    height: 80px;
+}
+#btn_back{
+    width: 70px;
+    height: 70px;
+}
+#btn_option{
+    width: 61px;
+    height: 61px;
+}
+
 button:hover{
     /* box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.5);  */
     /* rgba(0,0,0,0.5); #b3b3b3;*/
     background: #e2e2e2;
     cursor: pointer;
 }
-#btn_home:hover .svg-home{
+.btn_home:hover .svg-home{
     fill: #f47920;
     -webkit-transform: scale(0.9);
 }
-#btn_back:hover .svg-home{
+#btn_back:hover .svg-back{
     fill: #f0b429;
 }
+#btn_option:hover .svg-option{
+    fill: #f47920;
+}
+/* Na:#f47920 Am:#f0b429 Az:#005883 */
+
 button:active{
     /* filter: grayscale(100%); Solo para imagenes */
     /* opacity: 0.6; la vuelve medio trasnparente*/
-    filter: brightness(0.6); /* cambia luminosidad 0-1 */
+    filter: brightness(0.8); /* cambia luminosidad 0-1 */
     -webkit-transform: scale(0.79);
 }
 
@@ -256,7 +288,6 @@ figure{
     background: #e1e0e0; /* #e1e0e0 #e7e7e8 */
     height: 70px;
     width: 100%;
-    transform: translate(0px, -70px);
     display: inline-block;
 }
 .caja-footer #logo-unad{
@@ -273,21 +304,30 @@ figure{
     margin-bottom: 9px;
     height: 52px;
 }
-
+/* Si voy a poner btn_back entonces sumo -70 */
+#footer_home{
+    box-shadow: #f47920 0px -20px 0px;
+    transform: translate(0px, -70px);
+}
 #footer_c1{
     box-shadow: #f47920 0px -20px 0px;
+    transform: translate(0px, -70px);
 }
 #footer_c2{
     box-shadow: #f47920 0px -20px 0px;
+    transform: translate(0px, -70px);
 }
 #footer_c3{
     box-shadow: #f47920 0px -20px 0px;
+    transform: translate(0px, -70px);
 }
 #footer_c4{
     box-shadow: #f47920 0px -20px 0px;
+    transform: translate(0px, -70px);
 }
 #footer_c5{
     box-shadow: #f47920 0px -20px 0px;
+    transform: translate(0px, -70px);
 }
 
             /* Configuracion cajas de audio */
@@ -296,10 +336,22 @@ figure{
     height: 70px;
 }
 .caja-audio audio{
+    -webkit-transition: 0.05s ease-out;
     width: 250px;
     margin: 8px 0px;
+    border-radius: 30px;
+}
+.caja-audio audio:hover{
+    box-shadow: 0px 1.5px 8px 0px #a2a4a9;
+    cursor: pointer;
+    /* filter: brightness(0.84); */
 }
 
+#audio_home{
+    margin-right: 25px;
+    position: absolute;
+    right: 0px;
+}
 #audio_c1{
     margin-right: 25px;
     position: absolute;
