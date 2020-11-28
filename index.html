@@ -18,28 +18,28 @@
                 </button>
             </div>
             <div class="caja-cuerpo">
-                <header>
+                <header class="header-home">
                     <h1>CSS3</h1>
                     <h1>SELECTORES</h1>
                 </header>
-                <section>
-                    <p>Diseño web es la implementación de conceptos artísticos al desarrollar una página web,
-                        bien sabemos que las páginas web se crean con HTML, pues si agregamos a ese HTML 
-                        conceptos artísticos como el manejo de espacios, simetría, manejo de líneas, uso de colores, 
-                        entre otros, nuestra página web adoptará un aspecto profesional y llamativo, lo cual es muy 
-                        importante ya que creará confianza en los consumidores. Para realizar esto contamos con una 
-                        herramienta que ya goza de su tercera versión, si, hablamos de CSS.</p>
+                <section class="sect-home">
+                    <button id="btn_caja1_home" class="btn-caja-home">Introducción</button>
+                    <button id="btn_caja2_home" class="btn-caja-home">Conceptos</button>
+                    <button id="btn_caja3_home" class="btn-caja-home">Recursos</button>
+                    <button id="btn_caja4_home" class="btn-caja-home">Auto<br>evaluación</button>
+                    <button id="btn_caja5_home" class="btn-caja-home">Autor</button>
                 </section>
             </div>
             <div id="footer_home" class="caja-footer">
                 <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
                 <div id="audio_home" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
+                    <div class="div-btn-caja6"><button id="btn_caja6_home">Redes Sociales</button></div>
             </div>
         </div>
 
         <div id="caja_1" class="caja">
             <div class="icon" id="home">
-                <button id="btn_home_c1" class="btn_home">
+                <button id="btn_home_c1" class="btn-home">
                     <svg class="svg-home" role="img" title="svg_home">
                         <use href="#icon_home"/>
                     </svg>
@@ -68,7 +68,7 @@
 
         <div id="caja_2" class="caja">
             <div class="icon" id="home">
-                <button id="btn_home_c2" class="btn_home">
+                <button id="btn_home_c2" class="btn-home">
                     <svg class="svg-home" role="img" title="svg_home">
                         <use href="#icon_home"/>
                     </svg>
@@ -104,7 +104,7 @@
 
         <div id="caja_3" class="caja">
             <div class="icon" id="home">
-                <button id="btn_home_c3" class="btn_home">
+                <button id="btn_home_c3" class="btn-home">
                     <svg class="svg-home" role="img" title="svg_home">
                         <use href="#icon_home"/>
                     </svg>
@@ -140,7 +140,7 @@
 
         <div id="caja_4" class="caja">
             <div class="icon" id="home">
-                <button id="btn_home_c4" class="btn_home">
+                <button id="btn_home_c4" class="btn-home">
                     <svg class="svg-home" role="img" title="svg_home">
                         <use href="#icon_home"/>
                     </svg>
@@ -176,7 +176,7 @@
 
         <div id="caja_5" class="caja">
             <div class="icon" id="home">
-                <button id="btn_home_c5" class="btn_home">
+                <button id="btn_home_c5" class="btn-home">
                     <svg class="svg-home" role="img" title="svg_home">
                         <use href="#icon_home"/>
                     </svg>
@@ -210,7 +210,41 @@
             </div>
         </div>
 
-        
+        <div id="caja_6" class="caja">
+            <div class="icon" id="home">
+                <button id="btn_home_c6" class="btn-home">
+                    <svg class="svg-home" role="img" title="svg_home">
+                        <use href="#icon_home"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="caja-cuerpo">
+                <header>
+                    <h4>Diseño de</h4>
+                    <h1>Sitios Web</h1>
+                </header>
+                <section>
+                    <p>Diseño web es la implementación de conceptos artísticos al desarrollar una página web,
+                        bien sabemos que las páginas web se crean con HTML, pues si agregamos a ese HTML 
+                        conceptos artísticos como el manejo de espacios, simetría, manejo de líneas, uso de colores, 
+                        entre otros, nuestra página web adoptará un aspecto profesional y llamativo, lo cual es muy 
+                        importante ya que creará confianza en los consumidores. Para realizar esto contamos con una 
+                        herramienta que ya goza de su tercera versión, si, hablamos de CSS.</p>
+                </section>
+                <figure id="web-design"><img src="img/web-design.jpg" alt="Web design" width="500px"></figure>
+            </div>
+            <!-- <div class="icon" id="back">
+                <button id="btn_back">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back"/>
+                    </svg>
+                </button>
+            </div> -->
+            <div id="footer_c5" class="caja-footer">
+                <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
+                <div id="audio_c5" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
+            </div>
+        </div>
 
         <!-- <h3>Atribuciones bibliográficas</h3>
         <p>
@@ -361,7 +395,7 @@
         </symbol>
     </svg>
 
-<!-- ---------------Scripts--------------- -->
+    <!-- ---------------Scripts--------------- -->
     <script>
         caja_home.classList.add('ent');
 		caja_1.style.display = 'none';
@@ -369,6 +403,7 @@
         caja_3.style.display = 'none';
         caja_4.style.display = 'none';
         caja_5.style.display = 'none';
+        caja_6.style.display = 'none';
 
 // Funciones Pre declaradas
         function entrada(caja)
@@ -430,9 +465,64 @@
                 transiciones(caja_5, caja_home);
             },500);
         }
+        btn_home_c6.onclick = function()
+        {
+            salida(caja_6);
+            entrada(caja_home)
+            setTimeout(function(){
+                transiciones(caja_6, caja_home);
+            },500);
+        }
 
 // Funciones de los botones home
-        
+        btn_caja1_home.onclick = function()
+        {
+            salida(caja_home);
+            entrada(caja_1)
+            setTimeout(function(){
+                transiciones(caja_home, caja_1);
+            },500);
+        }
+        btn_caja2_home.onclick = function()
+        {
+            salida(caja_home);
+            entrada(caja_2)
+            setTimeout(function(){
+                transiciones(caja_home, caja_2);
+            },500);
+        }
+        btn_caja3_home.onclick = function()
+        {
+            salida(caja_home);
+            entrada(caja_3)
+            setTimeout(function(){
+                transiciones(caja_home, caja_3);
+            },500);
+        }
+        btn_caja4_home.onclick = function()
+        {
+            salida(caja_home);
+            entrada(caja_4)
+            setTimeout(function(){
+                transiciones(caja_home, caja_4);
+            },500);
+        }
+        btn_caja5_home.onclick = function()
+        {
+            salida(caja_home);
+            entrada(caja_5)
+            setTimeout(function(){
+                transiciones(caja_home, caja_5);
+            },500);
+        }
+        btn_caja6_home.onclick = function()
+        {
+            salida(caja_home);
+            entrada(caja_6)
+            setTimeout(function(){
+                transiciones(caja_home, caja_6);
+            },500);
+        }
     </script>
 </body>
 </html>

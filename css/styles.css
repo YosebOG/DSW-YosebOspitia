@@ -113,6 +113,14 @@ body{
     color: #f0b52a;
     text-shadow: 5px 3px 3px #333333;
 }
+.caja-cuerpo .header-home{
+
+}
+.caja-cuerpo .header-home h1{
+    line-height: 1em;
+    width: 100%;
+    margin: auto;
+}
 .caja-cuerpo header h4{
     line-height: 0.7em;
     margin-left: 400px;
@@ -132,6 +140,13 @@ body{
     text-align: justify;
     color: #ffffff;
     text-shadow: 0px 0px 0.5px #000000;
+}
+.caja-cuerpo .sect-home{
+    margin: 50px auto 50px auto;
+    text-align: center;
+    width: 980px;
+    display: flex;
+    align-items: center;
 }
             /* Configuración de iconos SVG */
 .icon{
@@ -161,6 +176,14 @@ body{
     float: right;
     margin-top: 12px;
     margin-right: 12px;
+}
+.div-btn-caja6{
+    margin: 10px auto;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .svg-home{
@@ -195,7 +218,7 @@ button{
     border-radius: 50px;
     border: none;
 }
-.btn_home{
+.btn-home{
     width: 80px;
     height: 80px;
 }
@@ -207,14 +230,43 @@ button{
     width: 61px;
     height: 61px;
 }
+.btn-caja-home{
+    -webkit-transition: 0.1s ease-out;
+    background: #f47920;
+    width: 150px;
+    height: 150px;
+    margin: 0px 20px;
+    border-radius: 100px;
+    /* border: solid;
+    border-width: 5px;
+    border-color: #f47920; */
+    color: #e1e1e1;
+    font-size: 22px;
+    font-family: 'Franklin Gothic';
+}
+#btn_caja6_home{
+    /* width: 250px; */
+    -webkit-transition: 0.1s ease-out;
+    height: 40px;
+    margin: 0px auto;
+    padding: 0px 9px 0px 25px;
+    font-size: 14px;
+    color: #636363;
+    letter-spacing: 8px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Book';
+    border: 1px solid #b3b3b3;
+}
 
 button:hover{
-    /* box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.5);  */
+    box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.5);
+    border-color: rgba(223,225,229,0);
     /* rgba(0,0,0,0.5); #b3b3b3;*/
     background: #e2e2e2;
     cursor: pointer;
+    border: none;
 }
-.btn_home:hover .svg-home{
+.btn-home:hover .svg-home{
     fill: #f47920;
     -webkit-transform: scale(0.9);
 }
@@ -223,6 +275,13 @@ button:hover{
 }
 #btn_option:hover .svg-option{
     fill: #f47920;
+}
+.btn-caja-home:hover{
+    color: #005883;
+}
+#btn_caja6_home:hover{
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.5);
+    border-color: rgba(223,225,229,0);
 }
 /* Na:#f47920 Am:#f0b429 Az:#005883 */
 
