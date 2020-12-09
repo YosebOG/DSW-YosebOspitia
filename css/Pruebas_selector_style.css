@@ -1,0 +1,26 @@
+li{
+    font-style: italic;
+    margin-left: 30px;
+}
+span{
+    font-weight: bold;
+    color: red;
+}
+
+.slc{
+    font-size: 20px;
+    color: saddlebrown;
+}
+
+#slc_id{
+    font-style: normal;
+    font-size: 30px;
+    color: blueviolet;
+}
+*{
+    color: seagreen;
+}
+[value]{
+    font-size: 40px;
+    text-shadow: 1px 1px 5px darkorange;
+}

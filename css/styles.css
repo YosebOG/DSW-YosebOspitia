@@ -34,7 +34,7 @@
     80%
     {
         opacity: 0.9;
-        -webkit-transform: scale(1.15);
+        -webkit-transform: scale(1.05);
     }
     100%
     {
@@ -53,10 +53,10 @@
         opacity: 1;
         -webkit-transform: scale(1);
     }
-    20%
+    40%
     {
         opacity: 1;
-        -webkit-transform: scale(1.15);
+        -webkit-transform: scale(1.08);
     }
     100%
     {
@@ -75,7 +75,7 @@
 }
 
 body{
-    background: #e7e7e8;
+    background: #ffffff;
 }
 
 .cuerpo{
@@ -282,6 +282,7 @@ button:hover{
 #btn_caja6_home:hover{
     box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.5);
     border-color: rgba(223,225,229,0);
+    background: #e4e4e4;
 }
 /* Na:#f47920 Am:#f0b429 Az:#005883 */
 
@@ -344,7 +345,7 @@ figure{
 
             /* Franja inferior */
 .caja-footer{
-    background: #e1e0e0; /* #e1e0e0 #e7e7e8 */
+    background: #eeeeee; /* #e1e0e0 #e7e7e8 */
     height: 70px;
     width: 100%;
     display: inline-block;
