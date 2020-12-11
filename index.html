@@ -18,11 +18,11 @@
                 </button>
             </div>
             <div class="caja-cuerpo">
-                <header class="header-home">
+                <header id="header_home">
                     <h1>CSS3</h1>
                     <h1>SELECTORES</h1>
                 </header>
-                <section class="sect-home">
+                <section id="sect_home">
                     <button id="btn_caja1_home" class="btn-caja-home">Introducción</button>
                     <button id="btn_caja2_home" class="btn-caja-home">Conceptos</button>
                     <button id="btn_caja3_home" class="btn-caja-home">Recursos</button>
@@ -32,7 +32,7 @@
             </div>
             <div id="footer_home" class="caja-footer">
                 <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
-                <div id="audio_home" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
+                <!-- <div id="audio_home" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div> -->
                     <div class="div-btn-caja6"><button id="btn_caja6_home">Redes Sociales</button></div>
             </div>
         </div>
@@ -46,11 +46,11 @@
                 </button>
             </div>
             <div class="caja-cuerpo">
-                <header>
+                <header id="header_intro">
                     <h4>Diseño de</h4>
                     <h1>Sitios Web</h1>
                 </header>
-                <section>
+                <section id="sec_intro">
                     <p>Diseño web es la implementación de conceptos artísticos al desarrollar una página web,
                         bien sabemos que las páginas web se crean con HTML, pues si agregamos a ese HTML 
                         conceptos artísticos como el manejo de espacios, simetría, manejo de líneas, uso de colores, 
@@ -58,7 +58,7 @@
                         importante ya que creará confianza en los consumidores. Para realizar esto contamos con una 
                         herramienta que ya goza de su tercera versión, si, hablamos de CSS.</p>
                 </section>
-                <figure id="web-design"><img src="img/web-design.jpg" alt="Web design" width="500px"></figure>
+                <figure id="web_design"><img src="img/web-design.jpg" alt="Web design" width="500px"></figure>
             </div>
             <div id="footer_c1" class="caja-footer">
                 <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
@@ -74,31 +74,242 @@
                     </svg>
                 </button>
             </div>
-            <div class="caja-cuerpo">
-                <header>
-                    <h4>Diseño de</h4>
-                    <h1>Sitios Web</h1>
+
+            <div id="sub_2_cu_1" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 1</h6></div>
+                </div>
+                <header class="header_concep">
+                    <h4>Estilos "inline, internos y externos"</h4>
+                    <h4>de CSS</h4>
                 </header>
-                <section>
-                    <p>Diseño web es la implementación de conceptos artísticos al desarrollar una página web,
-                        bien sabemos que las páginas web se crean con HTML, pues si agregamos a ese HTML 
-                        conceptos artísticos como el manejo de espacios, simetría, manejo de líneas, uso de colores, 
-                        entre otros, nuestra página web adoptará un aspecto profesional y llamativo, lo cual es muy 
-                        importante ya que creará confianza en los consumidores. Para realizar esto contamos con una 
-                        herramienta que ya goza de su tercera versión, si, hablamos de CSS.</p>
-                </section>
-                <figure id="web-design"><img src="img/web-design.jpg" alt="Web design" width="500px"></figure>
+                <div id="cont_concep_1" class="cont-concep">
+                    <h5>CSS Inline</h5>
+                    <section class="sec-concep">
+                        <p>Es cuando el estilo CSS se declara directamente sobre la etiqueta que 
+                            se quiere afectar en el HTML usando el atributo “style”, para aplicar 
+                            el estilo Inline utilizaremos esta sintaxis:</p>
+                    </section>
+                    <figure id="sin_inline"><img src="img/screen/1-inline-1.png" alt="sintaxis estilo inline"></figure>
+                </div>
             </div>
-            <!-- <div class="icon" id="back">
-                <button id="btn_back">
-                    <svg class="svg-back" role="img" title="svg_back">
-                        <use href="#icon_back"/>
+
+            <div id="sub_2_cu_2" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 2</h6></div>
+                </div>
+                <div id="cont_concep_2" class="cont-concep">
+                    <h5>CSS Interno</h5>
+                    <section class="sec-concep">
+                        <p>Los estilos CSS se declaran dentro de la etiqueta “&lt; head &gt;”, incluyendo 
+                            otra etiqueta denominada</p> 
+                        <p>“&lt; style &gt;” en la cual se colocará la definición 
+                            de todos los estilos para esa hoja HTML, lo que significa que con que 
+                            declaremos una vez el estilo para cierto tipo de elemento todos los elementos 
+                            de ese tipo se verán afectados, la sintaxis es la siguiente:</p>
+                    </section>
+                    <figure id="sin_interno"><img src="img/screen/2-interno.png" alt="sintaxis estilo interno"></figure>
+                </div>
+            </div>
+
+            <div id="sub_2_cu_3" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 3</h6></div>
+                </div>
+                <div id="cont_concep_3" class="cont-concep">
+                    <h5>CSS Externo</h5>
+                    <section class="sec-concep">
+                        <p>Se basa en declarar los estilos CSS en un archivo independiente, 
+                            es decir que con solo un archivo podemos afectar a todas las hojas 
+                            HTML de un proyecto en vez de tener que declarar los estilos en cada 
+                            hoja, únicamente se deberá invocar el nombre del archivo, por ejemplo:</p>
+                    </section>
+                    <div class="con-img-externo">
+                        <figure id="sin_externo_1" class="sin-externo"><img src="img/screen/3-externo-1.png" alt="sintaxis estilo externo"></figure>
+                        <figure id="sin_externo_2" class="sin-externo"><img src="img/screen/3-externo-2.png" alt="sintaxis estilo externo"></figure>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sub_2_cu_4" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 4</h6></div>
+                </div>
+                <header class="header_concep">
+                    <h4>Selectores de CSS</h4>
+                </header>
+                <div id="cont_concep_4" class="cont-concep">
+                    <section class="sec-concep">
+                        <p>Los selectores CSS son los que le indican al navegador a que elementos del HTML 
+                            se le aplicaran las propiedades de estilo, cuando declaramos los estilos de 
+                            forma interna o externa.</p>
+                    </section>
+                </div>
+                <div id="cont_concep_4_1" class="cont-concep">
+                    <h5>Selector de tipo</h5>
+                    <section class="sec-concep">
+                        <p>Selecciona todos los elementos que coinciden con el nombre del elemento especificado.</p>
+                    </section>
+                    <figure>
+                        <table class="tbl">
+                            <tr>
+                                <th class="col-1">Sintaxis</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td class="col-1">eltname</td>
+                                <td>input se aplica a cualquier elemento &lt; input &gt;</td>
+                            </tr>
+                        </table>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="sub_2_cu_5" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 5</h6></div>
+                </div>
+                <div id="cont_concep_5_1" class="cont-concep">
+                    <h5>Selector de clase</h5>
+                    <section class="sec-concep">
+                        <p>Selecciona todos los elementos que tienen el atributo de “class” especificado.</p> 
+                    </section>
+                    <figure>
+                        <table class="tbl tbl-slc-5">
+                            <tr>
+                                <th class="col-1">Sintaxis</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td class="col-1">.classname</td>
+                                <td>.index se aplicará a cualquier elemento que tenga la clase "index"</td>
+                            </tr>
+                        </table>
+                    </figure>
+                </div>
+
+                <div id="cont_concep_5_2" class="cont-concep">
+                    <h5>Selector de ID</h5>
+                    <section class="sec-concep">
+                        <p>Selecciona un elemento basándose en el valor de su atributo “id”. Solo puede haber 
+                            un elemento con un determinado ID dentro de un archivo</p> 
+                    </section>
+                    <figure>
+                        <table class="tbl tbl-slc-5">
+                            <tr>
+                                <th class="col-1">Sintaxis</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td class="col-1">#idname</td>
+                                <td>#toc se aplicará a cualquier elemento que tenga el ID "toc"</td>
+                            </tr>
+                        </table>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="sub_2_cu_6" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 6</h6></div>
+                </div>
+                <div id="cont_concep_6_1" class="cont-concep">
+                    <h5>Selector universal</h5>
+                    <section class="sec-concep">
+                        <p>Selecciona todos los elementos.</p> 
+                    </section>
+                    <figure>
+                        <table class="tbl tbl-slc-6">
+                            <tr>
+                                <th class="col-1">Sintaxis</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td class="col-1">  *</td>
+                                <td>* se aplicará a todos los elementos del html</td>
+                            </tr>
+                        </table>
+                    </figure>
+                </div>
+
+                <div id="cont_concep_6_2" class="cont-concep">
+                    <h5>Selector de atributo</h5>
+                    <section class="sec-concep">
+                        <p>Selecciona elementos basándose en el valor de un determinado atributo.</p> 
+                    </section>
+                    <figure>
+                        <table id="table_6" class="tbl tbl-slc-6">
+                            <tr>
+                                <th class="col-1">Sintaxis</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td class="col-1">[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</td>
+                                <td>[autoplay] seleccionará todos los elementos que tengan el atributo “autoplay” establecido (a cualquier valor)</td>
+                            </tr>
+                        </table>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="icon" id="next">
+                <button class="btn-next" id="btn_next_c2_1">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
                     </svg>
                 </button>
-            </div> -->
+                <button class="btn-next" id="btn_next_c2_2">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+                <button class="btn-next" id="btn_next_c2_3">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+                <button class="btn-next" id="btn_next_c2_4">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+                <button class="btn-next" id="btn_next_c2_5">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="icon" id="back">
+                <button class="btn-back" id="btn_back_c2_2">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+                <button class="btn-back" id="btn_back_c2_3">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+                <button class="btn-back" id="btn_back_c2_4">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+                <button class="btn-back" id="btn_back_c2_5">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+                <button class="btn-back" id="btn_back_c2_6">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+            </div>
+
             <div id="footer_c2" class="caja-footer">
                 <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
-                <div id="audio_c2" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
+                <!-- <div id="audio_c2" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div> -->
             </div>
         </div>
 
@@ -110,31 +321,143 @@
                     </svg>
                 </button>
             </div>
-            <div class="caja-cuerpo">
-                <header>
-                    <h4>Diseño de</h4>
-                    <h1>Sitios Web</h1>
+
+            <div id="sub_3_cu_1" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 1</h6></div>
+                </div>
+                <header class="header_concep">
+                    <h4>Ejemplos</h4>
                 </header>
-                <section>
-                    <p>Diseño web es la implementación de conceptos artísticos al desarrollar una página web,
-                        bien sabemos que las páginas web se crean con HTML, pues si agregamos a ese HTML 
-                        conceptos artísticos como el manejo de espacios, simetría, manejo de líneas, uso de colores, 
-                        entre otros, nuestra página web adoptará un aspecto profesional y llamativo, lo cual es muy 
-                        importante ya que creará confianza en los consumidores. Para realizar esto contamos con una 
-                        herramienta que ya goza de su tercera versión, si, hablamos de CSS.</p>
-                </section>
-                <figure id="web-design"><img src="img/web-design.jpg" alt="Web design" width="500px"></figure>
+                <div id="cont_concep_1" class="cont-concep">
+                    <h5>CSS Inline</h5>
+                    <div class="con-img-sty-inline">
+                        <figure id="sty_inline_1" class="sty-inline"><img src="img/screen/style_inline.png" alt="Ejemplo estilo inline codigo"></figure>
+                        <figure id="sty_inline_2" class="sty-inline"><img src="img/screen/style_inline_web.png" alt="Ejemplo estilo inline web"></figure>
+                    </div>
+                </div>
             </div>
-            <!-- <div class="icon" id="back">
-                <button id="btn_back">
-                    <svg class="svg-back" role="img" title="svg_back">
-                        <use href="#icon_back"/>
+
+            <div id="sub_3_cu_2" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 2</h6></div>
+                </div>
+                <div id="cont_concep_2" class="cont-concep">
+                    <h5>CSS Interno</h5>
+                    <div class="con-img-sty-interno">
+                        <figure id="sty_interno_1" class="sty-interno"><img src="img/screen/style_interno.png" alt="Ejemplo estilo interno codigo"></figure>
+                        <figure id="sty_interno_2" class="sty-interno"><img src="img/screen/style_interno_web.png" alt="Ejemplo estilo interno web"></figure>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sub_3_cu_3" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 3</h6></div>
+                </div>
+                <div id="cont_concep_3" class="cont-concep">
+                    <h5>CSS Externo</h5>
+                    <figure id="sty_externo_1" class="sty-externo"><img src="img/screen/style_externo_1.png" alt="Ejemplo estilo externo codigo 1"></figure> 
+                </div>
+            </div>
+
+            <div id="sub_3_cu_4" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 4</h6></div>
+                </div>
+                <div id="cont_concep_4" class="cont-concep">
+                    <h5>CSS Externo</h5>
+                    <div class="con-img-sty-externo">
+                        <figure id="sty_externo_2" class="sty-externo"><img src="img/screen/style_externo_2.png" alt="Ejemplo estilo externo codigo 2"></figure>
+                        <figure id="sty_externo_3" class="sty-externo"><img src="img/screen/style_externo_web.png" alt="Ejemplo estilo externo web"></figure>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sub_3_cu_5" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 5</h6></div>
+                </div>
+                <header class="header_concep">
+                    <h4>Selectores de CSS</h4>
+                </header>
+                <div id="cont_concep_5" class="cont-concep">
+                    <figure id="sty_selector_1" class="sty-selector"><img src="img/screen/prueba_selector.png" alt="Ejemplo estilo selector codigo 1"></figure>
+                </div>
+            </div>
+
+            <div id="sub_3_cu_6" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 6</h6></div>
+                </div>
+                <header class="header_concep">
+                    <h4>Selectores de CSS</h4>
+                </header>
+                <div id="cont_concep_6" class="cont-concep">
+                    <div class="con-img-sty-selector">
+                        <figure id="sty_selector_2" class="sty-selector"><img src="img/screen/prueba_selector_style.png" alt="Ejemplo estilo selector codigo 2"></figure>
+                        <figure id="sty_selector_3" class="sty-selector"><img src="img/screen/prueba_selector_web.png" alt="Ejemplo estilo selector web"></figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="icon" id="next">
+                <button class="btn-next" id="btn_next_c3_1">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
                     </svg>
                 </button>
-            </div> -->
+                <button class="btn-next" id="btn_next_c3_2">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+                <button class="btn-next" id="btn_next_c3_3">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+                <button class="btn-next" id="btn_next_c3_4">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+                <button class="btn-next" id="btn_next_c3_5">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="icon" id="back">
+                <button class="btn-back" id="btn_back_c3_2">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+                <button class="btn-back" id="btn_back_c3_3">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+                <button class="btn-back" id="btn_back_c3_4">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+                <button class="btn-back" id="btn_back_c3_5">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+                <button class="btn-back" id="btn_back_c3_6">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+            </div>
+            
             <div id="footer_c3" class="caja-footer">
                 <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
-                <div id="audio_c3" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
             </div>
         </div>
 
@@ -146,7 +469,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="caja-cuerpo">
+            <div class="caja-cuerpo-def">
                 <header>
                     <h4>Diseño de</h4>
                     <h1>Sitios Web</h1>
@@ -170,7 +493,7 @@
             </div> -->
             <div id="footer_c4" class="caja-footer">
                 <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
-                <div id="audio_c4" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
+                <!-- <div id="audio_c4" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div> -->
             </div>
         </div>
 
@@ -182,20 +505,44 @@
                     </svg>
                 </button>
             </div>
-            <div class="caja-cuerpo">
-                <header>
-                    <h4>Diseño de</h4>
-                    <h1>Sitios Web</h1>
+            <div class="caja-cuerpo-def">
+                <header id="header_autor">
+                    <h1>Autor</h1>
                 </header>
                 <section>
-                    <p>Diseño web es la implementación de conceptos artísticos al desarrollar una página web,
-                        bien sabemos que las páginas web se crean con HTML, pues si agregamos a ese HTML 
-                        conceptos artísticos como el manejo de espacios, simetría, manejo de líneas, uso de colores, 
-                        entre otros, nuestra página web adoptará un aspecto profesional y llamativo, lo cual es muy 
-                        importante ya que creará confianza en los consumidores. Para realizar esto contamos con una 
-                        herramienta que ya goza de su tercera versión, si, hablamos de CSS.</p>
+                    <table id="tbl_autor">
+                        <tr>
+                            <td rowspan="6" id="tbl_aut_col_1">
+                                <figure id="img_autor"><img src="img/img_autor_ovi.jpg" alt="Imagen del autor del OVI"></figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tbl-aut-spc"></td>
+                            <th class="tbl-aut-col-2">Nombre:</th>
+                            <td class="tbl-aut-col-3">Yoseb Julian Ospitia Gomez</td>
+                        </tr>
+                        <tr>
+                            <td class="tbl-aut-spc"></td>
+                            <th class="tbl-aut-col-2">Código:</th>
+                            <td class="tbl-aut-col-3">C.C. 1004251609</td>
+                        </tr>
+                        <tr>
+                            <td class="tbl-aut-spc"></td>
+                            <th class="tbl-aut-col-2">Programa:</th>
+                            <td class="tbl-aut-col-3">Ingeniería de Sistemas</td>
+                        </tr>
+                        <tr>
+                            <td class="tbl-aut-spc"></td>
+                            <th class="tbl-aut-col-2">Correo electrónico:</th>
+                            <td class="tbl-aut-col-3">caleb2515@outlook.es</td>
+                        </tr>
+                        <tr>
+                            <td class="tbl-aut-spc"></td>
+                            <th class="tbl-aut-col-2">Usuario skype:</th>
+                            <td class="tbl-aut-col-3">live:caleb2515_1</td>
+                        </tr>
+                    </table>
                 </section>
-                <figure id="web-design"><img src="img/web-design.jpg" alt="Web design" width="500px"></figure>
             </div>
             <!-- <div class="icon" id="back">
                 <button id="btn_back">
@@ -206,7 +553,7 @@
             </div> -->
             <div id="footer_c5" class="caja-footer">
                 <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
-                <div id="audio_c5" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
+                <!-- <div id="audio_c5" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div> -->
             </div>
         </div>
 
@@ -218,31 +565,28 @@
                     </svg>
                 </button>
             </div>
-            <div class="caja-cuerpo">
-                <header>
-                    <h4>Diseño de</h4>
-                    <h1>Sitios Web</h1>
+            <div class="caja-cuerpo-def">
+                <header id="header_redes">
+                    <h4>Twitter</h4>
                 </header>
-                <section>
-                    <p>Diseño web es la implementación de conceptos artísticos al desarrollar una página web,
-                        bien sabemos que las páginas web se crean con HTML, pues si agregamos a ese HTML 
-                        conceptos artísticos como el manejo de espacios, simetría, manejo de líneas, uso de colores, 
-                        entre otros, nuestra página web adoptará un aspecto profesional y llamativo, lo cual es muy 
-                        importante ya que creará confianza en los consumidores. Para realizar esto contamos con una 
-                        herramienta que ya goza de su tercera versión, si, hablamos de CSS.</p>
-                </section>
-                <figure id="web-design"><img src="img/web-design.jpg" alt="Web design" width="500px"></figure>
+                <div id="redes_con">
+                    <div id="con_wid_twitter">
+                        <a class="twitter-timeline" target="_blank" data-lang="es" data-width="500" data-height="350" data-theme="light" href="https://twitter.com/UniversidadUNAD?ref_src=twsrc%5Etfw">
+                            Tweets by UniversidadUNAD
+                        </a> 
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    <div id="con_iconos">
+                        <ul>
+                            <li><a href="https://www.facebook.com/UniversidadUNAD/" target="_blank"><figure class="con-fig-red"><img src="img/045-facebook.png" alt="Logo facebook"></figure></a></li>
+                            <li><a href="https://www.instagram.com/universidadunad/?hl=es-la" target="_blank"><figure class="con-fig-red"><img src="img/034-instagram.png" alt="Logo Instagram"></figure></a></li>
+                            <li><a href="https://www.youtube.com/user/universidadunad" target="_blank"><figure class="con-fig-red"><img src="img/002-youtube.png" alt="Logo Youtube"></figure></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <!-- <div class="icon" id="back">
-                <button id="btn_back">
-                    <svg class="svg-back" role="img" title="svg_back">
-                        <use href="#icon_back"/>
-                    </svg>
-                </button>
-            </div> -->
-            <div id="footer_c5" class="caja-footer">
+            <div id="footer_c6" class="caja-footer">
                 <figure id="logo-unad"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></figure>
-                <div id="audio_c5" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
             </div>
         </div>
 
@@ -408,6 +752,7 @@
         caja_5.style.display = 'none';
         caja_6.style.display = 'none';
 
+
 // Funciones Pre declaradas
         function entrada(caja)
 		{
@@ -419,6 +764,18 @@
 		{
 			caja.classList.remove('ent');
 			caja.classList.add('sal');
+		}
+
+        function entrada_con(cuerpo)
+		{
+			cuerpo.classList.remove('sal_con');
+			cuerpo.classList.add('ent_con');
+		}
+
+		function salida_con(cuerpo)
+		{
+			cuerpo.classList.remove('ent_con');
+			cuerpo.classList.add('sal_con');
 		}
 
         function transiciones(va, en)
@@ -477,7 +834,7 @@
             },500);
         }
 
-// Funciones de los botones home
+// Funciones de los botones de caja
         btn_caja1_home.onclick = function()
         {
             salida(caja_home);
@@ -526,6 +883,350 @@
                 transiciones(caja_home, caja_6);
             },500);
         }
+
+// Funciones de los bonotes back y next Caja_2
+        sub_2_cu_2.style.display = 'none';
+        sub_2_cu_3.style.display = 'none';
+        sub_2_cu_4.style.display = 'none';
+        sub_2_cu_5.style.display = 'none';
+        sub_2_cu_6.style.display = 'none';
+
+        btn_back_c2_2.style.display = 'none';
+        btn_next_c2_2.style.display = 'none';
+        btn_back_c2_3.style.display = 'none';
+        btn_next_c2_3.style.display = 'none';
+        btn_back_c2_4.style.display = 'none';
+        btn_next_c2_4.style.display = 'none';
+        btn_back_c2_5.style.display = 'none';
+        btn_next_c2_5.style.display = 'none';
+        btn_back_c2_6.style.display = 'none';
+
+        btn_next_c2_1.onclick = function()
+        {
+            salida_con(sub_2_cu_1);
+            salida_con(btn_next_c2_1);
+            entrada_con(sub_2_cu_2);
+            entrada_con(btn_back_c2_2);
+            entrada_con(btn_next_c2_2);
+            setTimeout(function(){
+                transiciones(sub_2_cu_1,sub_2_cu_2);
+                btn_next_c2_1.style.display = 'none';
+                btn_back_c2_2.style.display = 'block';
+                btn_next_c2_2.style.display = 'block';
+            },500);
+        }
+        btn_back_c2_2.onclick = function()
+        {
+            salida_con(sub_2_cu_2);
+            salida_con(btn_back_c2_2);
+            salida_con(btn_next_c2_2);
+            entrada_con(sub_2_cu_1);
+            entrada_con(btn_next_c2_1);
+            setTimeout(function(){
+                transiciones(sub_2_cu_2,sub_2_cu_1);
+                btn_next_c2_1.style.display = 'block';
+                btn_back_c2_2.style.display = 'none';
+                btn_next_c2_2.style.display = 'none';
+            },500);
+        }
+        btn_next_c2_2.onclick = function()
+        {
+            salida_con(sub_2_cu_2);
+            salida_con(btn_back_c2_2);
+            salida_con(btn_next_c2_2);
+            entrada_con(sub_2_cu_3);
+            entrada_con(btn_back_c2_3);
+            entrada_con(btn_next_c2_3);
+            setTimeout(function(){
+                transiciones(sub_2_cu_2,sub_2_cu_3);
+                btn_next_c2_2.style.display = 'none';
+                btn_back_c2_2.style.display = 'none';
+                btn_next_c2_3.style.display = 'block';
+                btn_back_c2_3.style.display = 'block';
+            },500);
+        }
+        btn_back_c2_3.onclick = function()
+        {
+            salida_con(sub_2_cu_3);
+            salida_con(btn_back_c2_3);
+            salida_con(btn_next_c2_3);
+            entrada_con(sub_2_cu_2);
+            entrada_con(btn_back_c2_2);
+            entrada_con(btn_next_c2_2);
+            setTimeout(function(){
+                transiciones(sub_2_cu_3,sub_2_cu_2);
+                btn_back_c2_3.style.display = 'none';
+                btn_next_c2_3.style.display = 'none';
+                btn_back_c2_2.style.display = 'block';
+                btn_next_c2_2.style.display = 'block';
+            },500);
+        }
+        btn_next_c2_3.onclick = function()
+        {
+            salida_con(sub_2_cu_3);
+            salida_con(btn_back_c2_3);
+            salida_con(btn_next_c2_3);
+            entrada_con(sub_2_cu_4);
+            entrada_con(btn_back_c2_4);
+            entrada_con(btn_next_c2_4);
+            setTimeout(function(){
+                transiciones(sub_2_cu_3,sub_2_cu_4);
+                btn_back_c2_3.style.display = 'none';
+                btn_next_c2_3.style.display = 'none';
+                btn_back_c2_4.style.display = 'block';
+                btn_next_c2_4.style.display = 'block';
+            },500);
+        }
+        btn_back_c2_4.onclick = function()
+        {
+            salida_con(sub_2_cu_4);
+            salida_con(btn_back_c2_4);
+            salida_con(btn_next_c2_4);
+            entrada_con(sub_2_cu_3);
+            entrada_con(btn_back_c2_3);
+            entrada_con(btn_next_c2_3);
+            setTimeout(function(){
+                transiciones(sub_2_cu_4,sub_2_cu_3);
+                btn_back_c2_4.style.display = 'none';
+                btn_next_c2_4.style.display = 'none';
+                btn_back_c2_3.style.display = 'block';
+                btn_next_c2_3.style.display = 'block';
+            },500);
+        }
+        btn_next_c2_4.onclick = function()
+        {
+            salida_con(sub_2_cu_4);
+            salida_con(btn_back_c2_4);
+            salida_con(btn_next_c2_4);
+            entrada_con(sub_2_cu_5);
+            entrada_con(btn_back_c2_5);
+            entrada_con(btn_next_c2_5);
+            setTimeout(function(){
+                transiciones(sub_2_cu_4,sub_2_cu_5);
+                btn_back_c2_4.style.display = 'none';
+                btn_next_c2_4.style.display = 'none';
+                btn_back_c2_5.style.display = 'block';
+                btn_next_c2_5.style.display = 'block';
+            },500);
+        }
+        btn_back_c2_5.onclick = function()
+        {
+            salida_con(sub_2_cu_5);
+            salida_con(btn_back_c2_5);
+            salida_con(btn_next_c2_5);
+            entrada_con(sub_2_cu_4);
+            entrada_con(btn_back_c2_4);
+            entrada_con(btn_next_c2_4);
+            setTimeout(function(){
+                transiciones(sub_2_cu_5,sub_2_cu_4);
+                btn_back_c2_5.style.display = 'none';
+                btn_next_c2_5.style.display = 'none';
+                btn_back_c2_4.style.display = 'block';
+                btn_next_c2_4.style.display = 'block';
+            },500);
+        }
+        btn_next_c2_5.onclick = function()
+        {
+            salida_con(sub_2_cu_5);
+            salida_con(btn_back_c2_5);
+            salida_con(btn_next_c2_5);
+            entrada_con(sub_2_cu_6);
+            entrada_con(btn_back_c2_6);
+            setTimeout(function(){
+                transiciones(sub_2_cu_5,sub_2_cu_6);
+                btn_back_c2_5.style.display = 'none';
+                btn_next_c2_5.style.display = 'none';
+                btn_back_c2_6.style.display = 'block';
+            },500);
+        }
+        btn_back_c2_6.onclick = function()
+        {
+            salida_con(sub_2_cu_6);
+            salida_con(btn_back_c2_6);
+            entrada_con(sub_2_cu_5);
+            entrada_con(btn_back_c2_5);
+            entrada_con(btn_next_c2_5);
+            setTimeout(function(){
+                transiciones(sub_2_cu_6,sub_2_cu_5);
+                btn_back_c2_6.style.display = 'none';
+                btn_back_c2_5.style.display = 'block';
+                btn_next_c2_5.style.display = 'block';
+            },500);
+        }
+
+
+// Funciones de los botones back y next caja_3
+        sub_3_cu_2.style.display = 'none';
+        sub_3_cu_3.style.display = 'none';
+        sub_3_cu_4.style.display = 'none';
+        sub_3_cu_5.style.display = 'none';
+        sub_3_cu_6.style.display = 'none';
+
+        btn_back_c3_2.style.display = 'none';
+        btn_next_c3_2.style.display = 'none';
+        btn_back_c3_3.style.display = 'none';
+        btn_next_c3_3.style.display = 'none';
+        btn_back_c3_4.style.display = 'none';
+        btn_next_c3_4.style.display = 'none';
+        btn_back_c3_5.style.display = 'none';
+        btn_next_c3_5.style.display = 'none';
+        btn_back_c3_6.style.display = 'none';
+
+        btn_next_c3_1.onclick = function()
+        {
+            salida_con(sub_3_cu_1);
+            salida_con(btn_next_c3_1);
+            entrada_con(sub_3_cu_2);
+            entrada_con(btn_back_c3_2);
+            entrada_con(btn_next_c3_2);
+            setTimeout(function(){
+                transiciones(sub_3_cu_1,sub_3_cu_2);
+                btn_next_c3_1.style.display = 'none';
+                btn_back_c3_2.style.display = 'block';
+                btn_next_c3_2.style.display = 'block';
+            },500);
+        }
+        btn_back_c3_2.onclick = function()
+        {
+            salida_con(sub_3_cu_2);
+            salida_con(btn_back_c3_2);
+            salida_con(btn_next_c3_2);
+            entrada_con(sub_3_cu_1);
+            entrada_con(btn_next_c3_1);
+            setTimeout(function(){
+                transiciones(sub_3_cu_2,sub_3_cu_1);
+                btn_next_c3_1.style.display = 'block';
+                btn_back_c3_2.style.display = 'none';
+                btn_next_c3_2.style.display = 'none';
+            },500);
+        }
+        btn_next_c3_2.onclick = function()
+        {
+            salida_con(sub_3_cu_2);
+            salida_con(btn_back_c3_2);
+            salida_con(btn_next_c3_2);
+            entrada_con(sub_3_cu_3);
+            entrada_con(btn_back_c3_3);
+            entrada_con(btn_next_c3_3);
+            setTimeout(function(){
+                transiciones(sub_3_cu_2,sub_3_cu_3);
+                btn_next_c3_2.style.display = 'none';
+                btn_back_c3_2.style.display = 'none';
+                btn_next_c3_3.style.display = 'block';
+                btn_back_c3_3.style.display = 'block';
+            },500);
+        }
+        btn_back_c3_3.onclick = function()
+        {
+            salida_con(sub_3_cu_3);
+            salida_con(btn_back_c3_3);
+            salida_con(btn_next_c3_3);
+            entrada_con(sub_3_cu_2);
+            entrada_con(btn_back_c3_2);
+            entrada_con(btn_next_c3_2);
+            setTimeout(function(){
+                transiciones(sub_3_cu_3,sub_3_cu_2);
+                btn_back_c3_3.style.display = 'none';
+                btn_next_c3_3.style.display = 'none';
+                btn_back_c3_2.style.display = 'block';
+                btn_next_c3_2.style.display = 'block';
+            },500);
+        }
+        btn_next_c3_3.onclick = function()
+        {
+            salida_con(sub_3_cu_3);
+            salida_con(btn_back_c3_3);
+            salida_con(btn_next_c3_3);
+            entrada_con(sub_3_cu_4);
+            entrada_con(btn_back_c3_4);
+            entrada_con(btn_next_c3_4);
+            setTimeout(function(){
+                transiciones(sub_3_cu_3,sub_3_cu_4);
+                btn_back_c3_3.style.display = 'none';
+                btn_next_c3_3.style.display = 'none';
+                btn_back_c3_4.style.display = 'block';
+                btn_next_c3_4.style.display = 'block';
+            },500);
+        }
+        btn_back_c3_4.onclick = function()
+        {
+            salida_con(sub_3_cu_4);
+            salida_con(btn_back_c3_4);
+            salida_con(btn_next_c3_4);
+            entrada_con(sub_3_cu_3);
+            entrada_con(btn_back_c3_3);
+            entrada_con(btn_next_c3_3);
+            setTimeout(function(){
+                transiciones(sub_3_cu_4,sub_3_cu_3);
+                btn_back_c3_4.style.display = 'none';
+                btn_next_c3_4.style.display = 'none';
+                btn_back_c3_3.style.display = 'block';
+                btn_next_c3_3.style.display = 'block';
+            },500);
+        }
+        btn_next_c3_4.onclick = function()
+        {
+            salida_con(sub_3_cu_4);
+            salida_con(btn_back_c3_4);
+            salida_con(btn_next_c3_4);
+            entrada_con(sub_3_cu_5);
+            entrada_con(btn_back_c3_5);
+            entrada_con(btn_next_c3_5);
+            setTimeout(function(){
+                transiciones(sub_3_cu_4,sub_3_cu_5);
+                btn_back_c3_4.style.display = 'none';
+                btn_next_c3_4.style.display = 'none';
+                btn_back_c3_5.style.display = 'block';
+                btn_next_c3_5.style.display = 'block';
+            },500);
+        }
+        btn_back_c3_5.onclick = function()
+        {
+            salida_con(sub_3_cu_5);
+            salida_con(btn_back_c3_5);
+            salida_con(btn_next_c3_5);
+            entrada_con(sub_3_cu_4);
+            entrada_con(btn_back_c3_4);
+            entrada_con(btn_next_c3_4);
+            setTimeout(function(){
+                transiciones(sub_3_cu_5,sub_3_cu_4);
+                btn_back_c3_5.style.display = 'none';
+                btn_next_c3_5.style.display = 'none';
+                btn_back_c3_4.style.display = 'block';
+                btn_next_c3_4.style.display = 'block';
+            },500);
+        }
+        btn_next_c3_5.onclick = function()
+        {
+            salida_con(sub_3_cu_5);
+            salida_con(btn_back_c3_5);
+            salida_con(btn_next_c3_5);
+            entrada_con(sub_3_cu_6);
+            entrada_con(btn_back_c3_6);
+            setTimeout(function(){
+                transiciones(sub_3_cu_5,sub_3_cu_6);
+                btn_back_c3_5.style.display = 'none';
+                btn_next_c3_5.style.display = 'none';
+                btn_back_c3_6.style.display = 'block';
+            },500);
+        }
+        btn_back_c3_6.onclick = function()
+        {
+            salida_con(sub_3_cu_6);
+            salida_con(btn_back_c3_6);
+            entrada_con(sub_3_cu_5);
+            entrada_con(btn_back_c3_5);
+            entrada_con(btn_next_c3_5);
+            setTimeout(function(){
+                transiciones(sub_3_cu_6,sub_3_cu_5);
+                btn_back_c3_6.style.display = 'none';
+                btn_back_c3_5.style.display = 'block';
+                btn_next_c3_5.style.display = 'block';
+            },500);
+        }
+
+
+
     </script>
 </body>
 </html>
