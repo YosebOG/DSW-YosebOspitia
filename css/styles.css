@@ -118,7 +118,7 @@ body{
 }
 
 .cuerpo{
-    height: 100vh;
+    height: 97vh;
     display: flex;
     align-items: center;
     }
@@ -135,6 +135,7 @@ body{
     background: #005883;
     overflow: hidden;
     box-shadow: #343333 0px 0px 20px 0px;
+    transform: scale(0.98);
     /* box-shadow: 'color' 'des.hor' 'des.ver' 'difuminación' 'radio' */
 }
 
@@ -231,7 +232,7 @@ p{
 } 
 .caja-cuerpo #header_intro h4{
     line-height: 0.7em;
-    margin-left: 400px;
+    margin-left: 335px;
     margin-right: auto;
     margin-bottom: 8px;
     width: 300px;
@@ -296,6 +297,9 @@ p{
 .caja-cuerpo-def #cont_concep_5_2{
     margin-top: 30px;
     margin-left: 80px;
+}
+.caja-cuerpo-def #cont_concep_6{
+    margin-top: 30px;
 }
 .caja-cuerpo-def #cont_concep_6_1{
     margin-left: 100px;
@@ -856,7 +860,6 @@ figure{
     display: inline-block;
 }
 .caja-footer #logo-unad{
-    /* background: #E7E7E8; */
     margin-left: 25px;
     width: 250px;
     height: 70px;
@@ -868,7 +871,15 @@ figure{
     margin-top: 9px;
     margin-bottom: 9px;
     height: 52px;
+    transition: 0.18s ease-out;
 }
+.caja-footer #logo-unad:hover img{
+    transform: scale(0.87);
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 5px 1px #f0b429;
+}
+
 /* Si voy a poner btn_back entonces sumo -70 */
 #footer_home{
     box-shadow: #f47920 0px -20px 0px;
