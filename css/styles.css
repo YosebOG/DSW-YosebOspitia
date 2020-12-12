@@ -195,6 +195,9 @@ p{
     margin: 0 auto;
     padding-top: 40px;
 }
+#sub_7_cu{
+    height: 515px;
+}
 .caja-cuerpo-def .con_pag,
 .caja-cuerpo .con_pag{
     width: 1010px;
@@ -313,6 +316,22 @@ p{
 }
 .caja-cuerpo-def .sec-auto-i #pdf_1{
     width: 800px;
+    height: 420px;
+}
+.caja-cuerpo-def .sec-auto-m{
+    width: 800px;
+    height: 420px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+.caja-cuerpo-def .sec-auto-m #map_sit{
+    width: 740px;
+    height: 420px;
+    margin: 5px auto;
+    /* position: relative; */
+}
+.caja-cuerpo-def .sec-auto-m #map_sit_ifr{
+    width: 740px;
     height: 410px;
 }
 .caja-cuerpo-def .cont-concep{
@@ -990,7 +1009,20 @@ figure{
     box-shadow: #f47920 0px -20px 0px;
     transform: translate(0px, 20px);
 }
-
+#footer_c7{
+    height: 45px;
+    box-shadow: #f47920 0px -15px 0px;
+    transform: translate(0px, 0px);
+}
+#footer_c7 #logo-unad{
+    width: 165px;
+    height: 45px;
+}
+#footer_c7 #logo-unad img{
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
             /* Configuracion cajas de audio */
 .caja-audio{

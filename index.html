@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Etiquetas meta -->
+    <meta name="author" content="Yoseb Julian Ospitia Gomez">
+    <meta name="keywords" content="HTML, CSS, OVI, OVA, UNAD, diseño web, selectores, estilo, inline, en linea, interno, externo">
+    <meta name="description" content="Objeto virtual de información orientado al diseño web con css3, estilos css inline, internos, esternos y selectores css">
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>OVI - Selectores CSS</title>
 </head>
@@ -10,12 +15,17 @@
     <section class="cuerpo">
 
         <div id="caja_home" class="caja"> <!-- style="display: none;" -->
+            <!-- <div class="sub-menu">
+                <button id="btn_mapa">
+
+                </button>
+            </div> -->
             <div class="icon" id="option">
-                <!-- <button id="btn_option">
+                <button id="btn_option" title="Mapa del Sitio">
                     <svg class="svg-option" role="img" title="svg_option">
                         <use href="#icon_menu_1"/>
                     </svg>
-                </button> -->
+                </button>
             </div>
             <div class="caja-cuerpo">
                 <div class="con_pag">
@@ -672,6 +682,34 @@
             </div>
         </div>
 
+        <div id="caja_7" class="caja">
+            <div class="icon" id="home">
+                <button id="btn_home_c7" class="btn-home">
+                    <svg class="svg-home" role="img" title="svg_home">
+                        <use href="#icon_home"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="sub_7_cu" class="caja-cuerpo-def">
+                <!-- <div class="con_pag">
+                    <div class="pag"><h6>Pag. 3</h6></div>
+                </div> -->
+                <header>
+                    <h4>Mapa del Sitio</h4>
+                </header>
+                <section class="sec-auto-m">
+                    <div id="map_sit">
+                        <iframe id="map_sit_ifr" allowfullscreen frameborder="0" src="https://lucid.app/documents/embeddedchart/70e92ad7-854f-47f7-8e55-d5146b5f535a" id="pcAWMcQjpQ6K"></iframe>
+                    </div>
+                </section>
+            </div>
+
+            <div id="footer_c7" class="caja-footer">
+                <figure id="logo-unad"><a href="https://www.unad.edu.co/" target="_blank" title="Página de inicio de la Universidad Nacional Abierta y a Distancia"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></a></figure>
+            </div>
+        </div>
+
         <!-- <h3>Atribuciones bibliográficas</h3>
         <p>
         Creditos | Atribuciones
@@ -833,6 +871,7 @@
         caja_4.style.display = 'none';
         caja_5.style.display = 'none';
         caja_6.style.display = 'none';
+        caja_7.style.display = 'none';
 
 
 // Funciones Pre declaradas
@@ -916,6 +955,14 @@
                 transiciones(caja_6, caja_home);
             },500);
         }
+        btn_home_c7.onclick = function()
+        {
+            salida(caja_7);
+            entrada(caja_home)
+            setTimeout(function(){
+                transiciones(caja_7, caja_home);
+            },500);
+        }
 
 
 // Funciones de los botones de caja
@@ -967,7 +1014,14 @@
                 transiciones(caja_home, caja_6);
             },500);
         }
-
+        btn_option.onclick = function()
+        {
+            salida(caja_home);
+            entrada(caja_7)
+            setTimeout(function(){
+                transiciones(caja_home, caja_7);
+            },500);
+        }
 
 // Funciones de los bonotes back y next caja_1
         sub_1_cu_2.style.display = 'none';
