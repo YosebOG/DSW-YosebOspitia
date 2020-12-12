@@ -133,7 +133,7 @@ body{
     margin-right: auto;
     width: 1100px;
     height: 600px;
-    background: #005883;
+    background: #004669; /* #005883 #004669 */
     overflow: hidden;
     box-shadow: #343333 0px 0px 20px 0px;
     transform: scale(0.98);
@@ -193,7 +193,7 @@ p{
 .caja-cuerpo .con_pag{
     width: 1010px;
     position: absolute;
-    color: #005883;
+    color: #004669; /* #005883 #004669 */
     transform: translate(0px, -10px);
 }
 .caja-cuerpo-def .pag{
@@ -541,13 +541,13 @@ button:hover{
     fill: #f47920;
 }
 .btn-caja-home:hover{
-    color: #005883;
+    color: #004669; /* #005883 #004669 */
 }
 #btn_caja6_home:hover{
     box-shadow: none;
     /* box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.5); */
-    border-color: #005883;
-    background: #005883;
+    border-color: #004669; /* #005883 #004669 */
+    background: #004669; /* #005883 #004669 */
     color: #ffffff;
 }
 /* Na:#f47920 Am:#f0b429 Az:#005883 */
@@ -840,7 +840,7 @@ figure{
 }
 .tbl td, .tbl th,
 #tbl_autor td, #tbl_autor th{
-    border: 1px dotted #005883;
+    border: 1px dotted #004669; /* #005883 #004669 */
     padding: 8px;
     text-align: left;
 }
@@ -860,14 +860,14 @@ figure{
 }
 .tbl td{
     background: #e7e7e8;
-    color: #005883;
+    color: #004669; /* #005883 #004669 */
     font-size: 2em;
     font-family: 'Angsana New'; /* Angsana New | Franklin Gothic Book */
     line-height: 1em;
 }
 #tbl_autor td{
     background: #e7e7e8;
-    color: #005883;
+    color: #004669; /* #005883 #004669 */
     font-size: 1.8em;
     font-family: 'Angsana New';
     letter-spacing: 1px;
@@ -928,7 +928,7 @@ figure{
     transform: scale(0.87);
     background: #ffffff;
     border-radius: 3px;
-    box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 5px 1px #f0b429;
+    box-shadow: 0px 0px 0px 2px #ffffff/*, 0px 0px 5px 0px #f0b429*/;
 }
 
 /* Si voy a poner btn_back entonces sumo -70 */
