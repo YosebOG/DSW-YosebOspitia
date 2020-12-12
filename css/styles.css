@@ -189,6 +189,12 @@ p{
     margin: 0px auto;
     padding-top: 40px;
 }
+#sub_1_cu_2{
+    width: 1000px;
+    height: 560px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
 .caja-cuerpo-def .con_pag,
 .caja-cuerpo .con_pag{
     width: 1010px;
@@ -196,6 +202,7 @@ p{
     color: #004669; /* #005883 #004669 */
     transform: translate(0px, -10px);
 }
+.caja-cuerpo .pag,
 .caja-cuerpo-def .pag{
     width: 80px;
     background-color: #e7e7e8;
@@ -380,7 +387,6 @@ p{
     display: flex;
     text-align: center;
 }
-
 #home{
     width: 80px;
     height: 80px;
@@ -397,6 +403,13 @@ p{
     /* position: absolute;
     bottom: 50%; */
 }
+#back_intro{
+    width: 70px;
+    height: 70px;
+    float: left;
+    transform: translate(0px, -170px);
+    margin-left: 17px;
+}
 #back_c4{
     width: 70px;
     height: 70px;
@@ -409,6 +422,13 @@ p{
     height: 70px;
     float: right;
     transform: translate(0px, -90px);
+    margin-right: 17px;
+}
+#next_intro{
+    width: 70px;
+    height: 70px;
+    float: right;
+    transform: translate(0px, -170px);
     margin-right: 17px;
 }
 #next_c4{
@@ -938,7 +958,7 @@ figure{
 }
 #footer_c1{
     box-shadow: #f47920 0px -20px 0px;
-    transform: translate(0px, -70px);
+    transform: translate(0px, -140px);
 }
 #footer_c2{
     box-shadow: #f47920 0px -20px 0px;

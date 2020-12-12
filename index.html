@@ -48,7 +48,11 @@
                     </svg>
                 </button>
             </div>
-            <div class="caja-cuerpo">
+
+            <div id="sub_1_cu_1" class="caja-cuerpo">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 1</h6></div>
+                </div>
                 <header id="header_intro">
                     <h4>Diseño de</h4>
                     <h1>Sitios Web</h1>
@@ -63,6 +67,51 @@
                 </section>
                 <figure id="web_design"><img src="img/web-design.jpg" alt="Web design" width="500px"title="Diseño Web"></figure>
             </div>
+
+            <div id="sub_1_cu_2" class="caja-cuerpo-def">
+                <div class="con_pag">
+                    <div class="pag"><h6>Pag. 2</h6></div>
+                </div>
+                <header class="header_concep">
+                    <h4>Objetivos</h4>
+                </header>
+                <div id="cont_concep_5_2" class="cont-concep">
+                    <h5>Objetivo general</h5>
+                    <section class="sec-concep">
+                        <p>Realizar un "Objeto Virtual de Información OVI" para mejorar 
+                            el desarrollo de aprendizaje virtual de HTML y CSS.</p>
+                    </section>
+                </div>
+                <div id="cont_concep_5_2" class="cont-concep">
+                    <h5>Objetivos específicos</h5>
+                    <section class="sec-concep">
+                        <ul>
+                            <li>
+                                <p>Redactar una introducción clara del tema a exponer en el OVI.</p>
+                            </li>
+                            <li>
+                                <p>Elaborar páginas con un diseño atractivo y entendible.</p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="icon" id="next_intro">
+                <button class="btn-next" id="btn_next_c1_1">
+                    <svg class="svg-next" role="img" title="svg_next">
+                        <use href="#icon_next_1"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="icon" id="back_intro">
+                <button class="btn-back" id="btn_back_c1_2">
+                    <svg class="svg-back" role="img" title="svg_back">
+                        <use href="#icon_back_1"/>
+                    </svg>
+                </button>
+            </div>
+
             <div id="footer_c1" class="caja-footer">
                 <figure id="logo-unad"><a href="https://www.unad.edu.co/" target="_blank" title="Página de inicio de la Universidad Nacional Abierta y a Distancia"><img src="img/logo_horizontal-UNAD.png" alt="Logo UNAD"></a></figure>
                 <div id="audio_c1" class="caja-audio"><audio controls><source src="audio/caja_1-webdesign.mp3" type="audio/mp3"></audio></div>
@@ -816,7 +865,8 @@
 			va.style.display = 'none';
 			en.style.display = 'block';
         }
-        
+
+
 // Funciones de los botones home
         btn_home_c1.onclick = function()
         {
@@ -867,6 +917,7 @@
             },500);
         }
 
+
 // Funciones de los botones de caja
         btn_caja1_home.onclick = function()
         {
@@ -916,6 +967,38 @@
                 transiciones(caja_home, caja_6);
             },500);
         }
+
+
+// Funciones de los bonotes back y next caja_1
+        sub_1_cu_2.style.display = 'none';
+
+        btn_back_c1_2.style.display = 'none';
+
+        btn_next_c1_1.onclick = function()
+        {
+            salida_con(sub_1_cu_1);
+            salida_con(btn_next_c1_1);
+            entrada_con(sub_1_cu_2);
+            entrada_con(btn_back_c1_2);
+            setTimeout(function(){
+                transiciones(sub_1_cu_1,sub_1_cu_2);
+                btn_next_c1_1.style.display = 'none';
+                btn_back_c1_2.style.display = 'block';
+            },500);
+        }
+        btn_back_c1_2.onclick = function()
+        {
+            salida_con(sub_1_cu_2);
+            salida_con(btn_back_c1_2);
+            entrada_con(sub_1_cu_1);
+            entrada_con(btn_next_c1_1);
+            setTimeout(function(){
+                transiciones(sub_1_cu_2,sub_1_cu_1);
+                btn_next_c1_1.style.display = 'block';
+                btn_back_c1_2.style.display = 'none';
+            },500);
+        }
+
 
 // Funciones de los bonotes back y next Caja_2
         sub_2_cu_2.style.display = 'none';
